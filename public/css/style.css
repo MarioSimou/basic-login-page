@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+} 
+#global-wrapper {
+    height: 100vh;
+}
+#global-wrapper > #nav-wrapper {
+    height: 9vh;
+}
+#global-wrapper > #content-wrapper {
+    height: 91vh;
+    box-sizing: border-box;
+}
+
+#messages-wrapper {
+    padding: 0;
+}
+#message {
+    transition: all 1500ms ease-out;
+    -webkit-transition: all 1500ms ease-out;
+    -moz-transition: all 1500ms ease-out;
+    -o-transition: all 1500ms ease-out;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}

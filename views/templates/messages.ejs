@@ -1,0 +1,13 @@
+<div class="container-fluid" id="messages-wrapper">
+    <% if(messages) { %>
+    <% if(messages.type.trim().toLowerCase() === 'success') {%>
+    <div class="alert alert-success" id="message" role="alert">
+        <%= messages.content %>
+    </div>
+    <% } else if (messages.type.trim().toLowerCase() === 'warning') { %>
+    <div class="alert alert-danger" id="message" role="alert">
+        <%= messages.content %>
+    </div>
+    <% } %>
+    <% } %>
+</div>

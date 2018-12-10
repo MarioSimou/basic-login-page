@@ -1,0 +1,39 @@
+<% include ../templates/header.ejs %>
+<% include ../templates/nav.ejs %>
+<div class="position-absolute w-100">
+    <% include ../templates/messages.ejs %>
+</div>
+<div id="content-wrapper">
+    <div class="container-fluid h-100 d-flex justify-content-center align-items-center">
+        <div class="container w-50">
+            <form action="/register" method="POST">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                        <h4>Register</h4>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="name..." required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="email@domain.com"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Password:</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpassword">Confirm Password:</label>
+                    <input type="password" class="form-control" name="cpassword" id="cpassword" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-outline-success" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include ../templates/footer.ejs %>
