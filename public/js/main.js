@@ -22,7 +22,7 @@ pages.page.blocks = () =>{
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const url = window.location.href.replace(/(\w+\:\/\/\w+\:\d+\/)(.*)$/g, '$2');
+    const url = window.location.href.match(/(?<=http([s])?\:\/\/(\S+)\/)(.*)?/g)[0];
     console.log(url);
     switch(url){
         case 'register':

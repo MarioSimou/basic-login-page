@@ -10,6 +10,7 @@ const app = express(),
     mongoUri = require('./util/database'),
     mongoose = require('mongoose'),
     session = require('express-session');
+const redisStore = require('connect-redis')(session);
 
 
 // set ejs template/view engine
@@ -25,9 +26,10 @@ app.use(express.static(path.join(root, 'public')));
 app.use(session({
     secret: 'secret',
     resave: false,
+    store: new redisStore({ port: 6379, host: '127.0.0.1'}),
     saveUninitialized: false,
     cookie: {secure: false, maxAge: 86400 }
-}))
+}));
 
 
 // custom middleware that enables the use of messages in a client-server cycle

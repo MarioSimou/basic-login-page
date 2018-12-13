@@ -1,12 +1,12 @@
 <% include ../templates/header.ejs %>
 <% include ../templates/nav.ejs %>
 <% include ../templates/messages.ejs %>
-<div id="content-wrapper" class="d-flex flex-wrap">
-    <div class="container-fluid ">
+<div id="content-wrapper" class="d-flex flex-wrap pt-2">
+    <div class="container-fluid">
         <div class="jumbotron">
-            <h4>This page is visible only if the user has logged in.</h4>
+            <h3>Welcome <%= user.email %></h3>
+            <h2>This page is visible only if the user has logged in.</h2>
         </div>
     </div>
-
 </div>
 <% include ../templates/footer.ejs %>
